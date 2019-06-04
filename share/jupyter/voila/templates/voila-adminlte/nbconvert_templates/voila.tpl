@@ -255,34 +255,57 @@
           <!-- /.sidebar -->
       </aside>
 
-      <div class = "content-wrapper">
+      <div class="content-wrapper" style="overflow-y: scroll">
           <section class="content">
             <div class="row">
-              <div class="col-md-12">
-                  <div class="box">
+              <div class="col-xs-5">
+                  <div class="box box-success">
                       <div class="box-header with-border">
-                        <h3 class="box-title">Application</h3>
+                        <h3 class="box-title">Content 1</h3>
                         <div class="box-tools pull-right">
                           <!-- Buttons, labels, and many other things can be placed here! -->
-                          <span class="label label-primary">Label</span>
                         </div>
                         <!-- /.box-tools -->
                       </div>
                       <!-- /.box-header -->
                       <div class="box-body">
                         <div>
-                            <!-- A widget with the attribute data-mount-id="content" should go here -->
-                            <div data-mount-id="content"></div>
+                            <!-- A widget with the attribute data-mount-id="content1" should go here -->
+                            <div data-mount-id="content1"></div>
                         </div>
                       </div>
                       <!-- /.box-body -->
                       <div class="box-footer">
-                        The footer of the box
+                      </div>
+                      <!-- box-footer -->
+                  </div>
+                </div>
+
+                <div class="col-xs-5">
+                  <!-- /.box -->
+                  <div class="box box-warning">
+                      <div class="box-header with-border">
+                        <h3 class="box-title">Content 2</h3>
+                        <div class="box-tools pull-right">
+                          <!-- Buttons, labels, and many other things can be placed here! -->
+                        </div>
+                        <!-- /.box-tools -->
+                      </div>
+                      <!-- /.box-header -->
+                      <div class="box-body">
+                        <div>
+                            <!-- A widget with the attribute data-mount-id="content2" should go here -->
+                            <div data-mount-id="content2"></div>
+                        </div>
+                      </div>
+                      <!-- /.box-body -->
+                      <div class="box-footer">
                       </div>
                       <!-- box-footer -->
                   </div>
                   <!-- /.box -->
                 </div>
+              </div>
             </div>
         </section>
     </div>
