@@ -10,10 +10,22 @@
     <link href="https://unpkg.com/font-awesome@4.5.0/css/font-awesome.min.css" rel="stylesheet" type='text/css'>
     <link href="{{resources.base_url}}voila/static/index.css" rel="stylesheet" type='text/css'>
     <link href="{{resources.base_url}}voila/static/theme-light.css" rel="stylesheet" type='text/css'>
+    <script src="{{resources.base_url}}voila/static/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
     <script>
         {% include "util.js" %}
     </script>
-    <script src="{{resources.base_url}}voila/static/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
+    <script>
+        requirejs.config({
+          baseUrl: '{{resources.base_url}}voila',
+          waitSeconds: 3000
+        });
+        requirejs(['static/voila'], (voila) => init(voila));
+        requirejs([
+          {% for ext in resources.nbextensions -%}
+            "{{resources.base_url}}voila/nbextensions/{{ ext }}.js",
+          {% endfor %}
+        ]);
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   </head>
 
@@ -249,10 +261,9 @@
               <div class="col-md-12">
                   <div class="box">
                       <div class="box-header with-border">
-                        <h3 class="box-title">Small slider</h3>
+                        <h3 class="box-title">Application</h3>
                         <div class="box-tools pull-right">
                           <!-- Buttons, labels, and many other things can be placed here! -->
-                          <!-- Here is a label for example -->
                           <span class="label label-primary">Label</span>
                         </div>
                         <!-- /.box-tools -->
@@ -282,19 +293,6 @@
       "baseUrl": "{{resources.base_url}}",
       "kernelId": "{{resources.kernel_id}}"
     }
-  </script>
-
-  <script>
-    requirejs.config({
-      baseUrl: '{{resources.base_url}}voila',
-      waitSeconds: 3000
-    });
-    requirejs(['static/voila'], (voila) => init(voila));
-    requirejs([
-      {% for ext in resources.nbextensions -%}
-        "{{resources.base_url}}voila/nbextensions/{{ ext }}.js",
-      {% endfor %}
-    ]);
   </script>
 </html>
 
