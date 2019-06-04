@@ -3,7 +3,10 @@
     <head>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.10/js/adminlte.min.js"></script>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.10/css/AdminLTE.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.10/css/AdminLTE.min.css" rel="stylesheet" type='text/css'>
+        <link href="https://unpkg.com/font-awesome@4.5.0/css/font-awesome.min.css" rel="stylesheet" type='text/css'>
+        <link href="{{resources.base_url}}voila/static/index.css" rel="stylesheet" type='text/css'>
+        <link href="{{resources.base_url}}voila/static/theme-light.css" rel="stylesheet" type='text/css'>
         <script src="{{resources.base_url}}voila/static/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     </head>

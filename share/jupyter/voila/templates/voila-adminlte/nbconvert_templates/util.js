@@ -33,4 +33,12 @@ window.init = async (voila) => {
                 provideWidget(mountId, view);
             }
         });
+
+    // Then mount them on the page
+    const containers = document.querySelectorAll('[data-mount-id]');
+    containers.forEach((container) => {
+        requestWidget(container.getAttribute('data-mount-id')).then((view) => {
+            container.appendChild(view.el);
+        });
+    });
 };
