@@ -262,8 +262,9 @@
                   <div class="box box-success">
                       <div class="box-header with-border">
                         <h3 class="box-title">Content 1</h3>
-                        <div class="box-tools pull-right">
-                          <!-- Buttons, labels, and many other things can be placed here! -->
+                        <div class="box-tools">
+                          <!-- This will cause the box to collapse when clicked -->
+                          <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
                         </div>
                         <!-- /.box-tools -->
                       </div>
@@ -286,8 +287,9 @@
                   <div class="box box-warning">
                       <div class="box-header with-border">
                         <h3 class="box-title">Content 2</h3>
-                        <div class="box-tools pull-right">
-                          <!-- Buttons, labels, and many other things can be placed here! -->
+                        <div class="box-tools">
+                          <!-- This will cause the box to collapse when clicked -->
+                          <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
                         </div>
                         <!-- /.box-tools -->
                       </div>
