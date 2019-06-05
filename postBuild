@@ -1,1 +1,6 @@
+# Install template
 pip install .
+
+# Use template by default for the voila server extension
+jupyter notebook --generate-config
+echo 'c.VoilaConfiguration.template = "voila-adminlte"' >> ~/.jupyter/jupyter_notebook_config.py 
