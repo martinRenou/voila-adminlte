@@ -58,9 +58,27 @@
 
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu" data-widget="tree">
-              <li><a href="javascript:history.back()"><i class="fa fa-arrow-left"></i> <span>Back to tree view</span></a></li>
+              <li class="header">Folders</li>
+
+              {% if breadcrumbs|length > 1: %}
+                <li><a href="{{breadcrumbs[-2][0]}}"><i class="fa fa-folder"></i>..</a></li>
+              {% endif %}
+
+              {% for content in resources.contents.content %}
+                {% if content.type == 'notebook' %}
+                  {% if content.path == resources.notebook_name %}
+                    <li class="active"><a href="{{resources.base_url}}voila/render/{{content.path}}"><i class="fa fa-book"></i>{{content.name}}</a></li>
+                  {% else %}
+                    <li><a href="{{resources.base_url}}voila/render/{{content.path}}"><i class="fa fa-book"></i>{{content.name}}</a></li>
+                  {% endif %}
+                {% endif %}
+                {% if content.type == 'directory' %}
+                  <li><a href="{{resources.base_url}}voila/tree/{{content.path}}"><i class="fa fa-folder"></i>{{content.name}}</a></li>
+                {% endif %}
+              {% endfor %}
             </ul>
             <!-- /.sidebar-menu -->
+
           </section>
           <!-- /.sidebar -->
       </aside>
