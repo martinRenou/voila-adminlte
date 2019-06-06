@@ -49,7 +49,7 @@ def user_dir():
 
 class DevelopCmd(develop):
     prefix_targets = [
-        ("voila/templates", 'voila-adminlte')
+        ("voila/templates", 'adminlte')
     ]
     def run(self):
         target_dir = os.path.join(sys.prefix, 'share', 'jupyter')

@@ -1,6 +1,6 @@
 {
     "VoilaConfiguration": {
-        "template": "voila-adminlte"
+        "template": "adminlte"
     }
 }
 
